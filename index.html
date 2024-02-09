@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+<body>
+<h1>Conditional statement</h1>
+
+Enter your age:- <input type="number" id="user_age"></input>
+
+<button onclick="drive();">eligible</button>
+
+<br>
+<p id="demo"></p>
+
+<script>
+    function drive()
+    {
+  
+var age=document.getElementById("user_age").value;
+if(age>18)
+{
+    console.log("Congratulations. You are eligible to drive");
+    document.getElementById("demo").innerHTML="Congratulations. You are eligible to drive";
+}
+else if(age<0)
+{
+    document.getElementById("demo").innerHTML="Sorry invalid input. Please enter a positive number";
+}
+else if(age==0)
+{
+    document.getElementById("demo").innerHTML="Age should not be zero";
+}
+else{
+    document.getElementById("demo").innerHTML="Sorry. You are not eligible to drive. Please wait till you reach 18";
+}
+
+    }
+</script>
+</body>
+
+</html>
